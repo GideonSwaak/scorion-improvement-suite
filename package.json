@@ -1,0 +1,29 @@
+{
+    "name": "scorion-improvement-suite",
+    "version": "1.0.0",
+    "description": "Hogeschool Utrecht Scorion improvement suite",
+    "private": true,
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack --config-name=production",
+        "watch": "webpack --config-name=development"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/GideonSwaak/scorion-improvement-suite.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/GideonSwaak/scorion-improvement-suite/issues"
+    },
+    "homepage": "https://github.com/GideonSwaak/scorion-improvement-suite#readme",
+    "devDependencies": {
+        "webpack": "^5.77.0",
+        "webpack-cli": "^5.0.1"
+    },
+    "dependencies": {
+        "showdown": "^2.1.0"
+    }
+}
