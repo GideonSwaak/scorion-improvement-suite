@@ -1,0 +1,98 @@
+
+.custom-textarea {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    min-height: 3rem;
+    border: 1px solid $hu-gray;
+    border-bottom: 1px solid $hu-blue;
+    outline: none;
+    padding: .2rem;
+    box-sizing: border-box;
+    white-space: pre-wrap;
+    transition: .2s
+}
+
+.readonly-textarea {
+    font-family: Arial;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, .1098039216);
+    padding: .4rem;
+    margin: 0
+}
+
+.hidden {
+    display: none
+}
+
+.clsFormElementQuestion>table {
+    width: 100%
+}
+
+.clsFormElementBlock {
+    width: 100%
+}
+
+.clsFormElementBlock table tbody tr td:first-child {
+    width: 25%
+}
+
+.clsFormElementBlock table tbody tr td:nth-child(2) {
+    width: 75%
+}
+
+.vaardigheid-toelichting {
+    width: 100% !important
+}
+
+.custom-textarea:focus {
+    border-bottom: 1px solid $hu-gray;
+    box-shadow: 0 0 3px 1px $hu-blue
+}
+
+.divLabel[for*=toelichting] {
+    color: $hu-blue;
+    display: block;
+    width: fit-content;
+    border-left: 1px solid $hu-gray;
+    border-right: 1px solid $hu-gray;
+    border-top: 1px solid $hu-gray;
+    padding: .2rem
+}
+
+.custom-textarea ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.custom-textarea[contenteditable=false] {
+    white-space: unset;
+}
+
+.custom-textarea-titlebar {
+    width: 100%;
+    background-color: $hu-blue;
+    color: white;
+}
+
+.custom-textarea-titlebar .divLabel {
+    background: none;
+    border: 0;
+    color: white;
+    padding-left: 5px;
+}
+
+.btn-preview {
+    background-color: $scorion-orange;
+    color: white;
+    border: 0;
+    outline: 0;
+    height: 100%;
+    padding: 0.2rem;
+    padding-top: calc(0.2rem + 2.5px);
+    padding-bottom: calc(0.2rem + 2.5px);
+}
+
+.btn-preview:hover {
+    background-color: #e85818cc;
+    color: white;
+}

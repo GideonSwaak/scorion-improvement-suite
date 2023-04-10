@@ -1,0 +1,9 @@
+.vaardigheid-toelichting {
+    border-top: 1px solid #009fda;
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.clsFormElement table, .clsFormElement table textarea, .clsFormElement input:not([type="radio"]):not([type="checkbox"]) {
+    width: 100% !important;
+}
