@@ -57,8 +57,9 @@ You can use the command 'npm run serve' to spin up a local server on port 12000,
 (() => {
     const scorionScriptURL = "http://localhost:12000/bundle.js";
     const head = document.querySelector("head");
+    const script = document.createElement("script");
     script.type = "text/javascript";
     script.src = scorionScriptURL;
     head.appendChild(script);
-});
+})();
 ```
