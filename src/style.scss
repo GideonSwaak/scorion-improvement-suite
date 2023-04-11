@@ -1,0 +1,11 @@
+$hu-blue: #009fda;
+$hu-gray: #f0f0f0;
+$scorion-orange: #e85818;
+
+@import "./css/custom-textarea.scss";
+@import "./css/vaardigheid-toelichting.scss";
+
+/* Make the ontwikkelgesprek iframe more responsive */
+iframe[width="800px"] {
+    max-width: 85vw
+}

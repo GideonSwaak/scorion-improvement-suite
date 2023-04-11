@@ -1,19 +1,10 @@
-import { betterTextareaDecode, betterTextareaEncode } from "./utilities.js";
+import { betterTextareaDecode, betterTextareaEncode, markdownPreview } from "./utilities.js";
 import showdown from "showdown";
 
 $(document).ready(function () {
     const Showdown = new showdown.Converter();
 
-    function markdownPreview(element, enabled, textarea) {
-        if (enabled) {
-            element.innerHTML = Showdown.makeHtml(betterTextareaDecode(textarea.value, false));
-            element.contentEditable = false;
-        } else {
-            element.innerHTML = betterTextareaDecode(textarea.value, false);
-            element.contentEditable = true;
-        }
-    }
-
+    // Render non-readonly textareas
     function renderBetterTextarea(originalTextarea) {
         const customTextarea = document.createElement("div");
         customTextarea.classList.add("custom-textarea");
@@ -40,10 +31,10 @@ $(document).ready(function () {
             }
         });
         td.appendChild(button);
-
         return customTextarea;
     }
 
+    // Render readonly textareas
     function renderBetterReadonlyTextarea(element) {
         const readonlyTextarea = document.createElement("div");
         readonlyTextarea.classList.add("readonly-textarea");
@@ -51,6 +42,7 @@ $(document).ready(function () {
         return readonlyTextarea;
     }
 
+    // Replace all textareas with custom textareas (readonly and non-readonly)
     document.querySelectorAll("textarea.clsFormInputArea").forEach(textArea => {
         if (textArea.readOnly || textArea.disabled) {
             textArea.classList.add("old-readonly-textarea", "hidden");
