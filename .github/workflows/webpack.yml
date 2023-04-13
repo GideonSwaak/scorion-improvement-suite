@@ -21,7 +21,9 @@ jobs:
       run: |
         npm install
         npm run build
-    - name: Uploaded artifact
+        ls
+    - name: Upload artifact
       uses: actions/upload-artifact@v3.1.2
       with:
-        path: /dist/bundle.min.js
+        path: ./dist/bundle.min.js
+        
