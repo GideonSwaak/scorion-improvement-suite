@@ -1,4 +1,4 @@
-# scorion-improvement-suite
+# Scorion Improvement Suite
 Hogeschool Utrecht Scorion improvement suite
 
 ## Building

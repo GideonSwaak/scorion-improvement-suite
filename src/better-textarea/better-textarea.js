@@ -13,6 +13,11 @@ $(document).ready(function () {
         customTextarea.addEventListener("input", function () {
             originalTextarea.value = betterTextareaEncode(customTextarea.innerHTML, true);
         });
+        customTextarea.addEventListener("paste", function (event) {
+            event.preventDefault();
+            const text = event.clipboardData.getData("text/plain");
+            document.execCommand("insertHTML", false, text);
+        });
 
         const titlebar = originalTextarea.closest("tr").previousElementSibling;
         titlebar.classList.add("custom-textarea-titlebar");
