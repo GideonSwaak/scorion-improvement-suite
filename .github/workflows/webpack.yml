@@ -23,4 +23,5 @@ jobs:
         npm run build
     - name: Uploaded artifact
       uses: actions/upload-artifact@v3.1.2
-      path: /dist/bundle.min.js
+      with:
+        path: /dist/bundle.min.js
