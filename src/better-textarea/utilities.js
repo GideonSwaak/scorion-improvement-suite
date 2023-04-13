@@ -13,8 +13,20 @@ import showdown from "showdown";
 export function betterTextareaEncode(text, replaceLinebreaks = false) {
     if (replaceLinebreaks) {
         text = text.replaceAll("<br>", "\n");
+        text = stripHTML(text);
     }
     return text.replaceAll("\u0027", "\u2019");
+}
+
+/**
+ * 
+ * @param { string } text 
+ * @returns { string } the text without HTML tags
+ */
+export function stripHTML(text) {
+    let temp = document.createElement("div");
+    temp.innerHTML = text;
+    return temp.textContent || temp.innerText || "";
 }
 
 /**
@@ -39,6 +51,9 @@ export function markdownPreview(element, enabled, textarea) {
     const Showdown = new showdown.Converter();
     if (enabled) {
         element.innerHTML = Showdown.makeHtml(betterTextareaDecode(textarea.value, false));
+        element.querySelectorAll("a").forEach(a => {
+            a.target = "_blank";
+        });
         element.contentEditable = false;
     } else {
         element.innerHTML = betterTextareaDecode(textarea.value, false);
