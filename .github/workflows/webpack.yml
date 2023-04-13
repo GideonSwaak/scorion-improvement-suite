@@ -23,7 +23,7 @@ jobs:
         npm run build
         ls
     - name: Upload artifact
-      uses: actions/upload-artifact@v3.1.2
+      uses: svenstaro/upload-release-action@2.5.0
       with:
-        path: ./dist/bundle.min.js
+        file: ./dist/bundle.min.js
         
