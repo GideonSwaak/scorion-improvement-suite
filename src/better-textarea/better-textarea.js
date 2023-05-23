@@ -2,6 +2,8 @@ import { betterTextareaDecode, betterTextareaEncode, markdownPreview } from "./u
 import showdown from "showdown";
 
 $(document).ready(function () {
+    showdown.setOption("simpleLineBreaks", true);
+    showdown.setOption("simplifiedAutoLink", true);
     const Showdown = new showdown.Converter();
 
     // Render non-readonly textareas
