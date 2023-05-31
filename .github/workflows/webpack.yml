@@ -24,7 +24,10 @@ jobs:
           ls
       - name: Generate file name
         id: file-name
-        run: echo "::set-output name=file_name::bundle.min.$(git rev-parse --short HEAD).js"
+        run: echo "::set-output name=file_name::bundle.min-$(git rev-parse --short HEAD).js"
+      - name: Move bundle file
+        run: |
+          mv ./dist/bundle.min.js ./dist/${{ steps.file-name.outputs.file_name }}
       - name: Upload artifact
         uses: svenstaro/upload-release-action@2.5.0
         with:
