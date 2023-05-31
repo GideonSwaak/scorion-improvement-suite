@@ -24,6 +24,7 @@
     "devDependencies": {
         "concurrently": "^8.0.1",
         "css-loader": "^6.7.3",
+        "expresss": "^0.0.0",
         "fs": "^0.0.1-security",
         "node-sass": "^8.0.0",
         "raw-loader": "^4.0.2",
