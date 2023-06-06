@@ -1,0 +1,1 @@
+import "./datapunten-tabel.js";
