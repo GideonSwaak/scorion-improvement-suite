@@ -96,3 +96,18 @@
     background-color: #e85818cc;
     color: white;
 }
+
+.custom-textarea table {
+    width: 100%;
+    border-collapse: collapse;
+    tbody tr td {
+        border: 1px solid $hu-gray;
+        padding: 0.2rem;
+    }
+    thead tr td {
+        border: 1px solid $hu-gray;
+        padding: 0.2rem;
+        background-color: $hu-blue;
+        color: white;
+    }
+}
