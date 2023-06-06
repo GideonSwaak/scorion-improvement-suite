@@ -4,6 +4,8 @@ import showdown from "showdown";
 $(document).ready(function () {
     showdown.setOption("simpleLineBreaks", true);
     showdown.setOption("simplifiedAutoLink", true);
+    showdown.setOption("tables", true);
+    showdown.setOption("tasklists", true);
     const Showdown = new showdown.Converter();
 
     // Render non-readonly textareas
